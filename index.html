@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ultra Smooth Marquee</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      overflow: hidden;
+    }
+
+    .marquee-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-left 50s linear infinite;
+    }
+
+    .marquee-content {
+      display: flex;
+    }
+
+    .marquee-track img {
+      height: 110px;
+      flex-shrink: 0;
+      image-rendering: auto;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee-container">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <!-- Your repeated images go here -->
+        <img src="logo.png" alt="Logo" />
+        <img src="logo2.png" alt="Logo" />
+        <img src="logo3.png" alt="Logo" />
+        <img src="logo.png" alt="Logo" />
+        <img src="logo2.png" alt="Logo" />
+        <img src="logo3.png" alt="Logo" />
+
+
+       
+       
+      </div>
+      <div class="marquee-content">
+        <!-- Duplicate for seamless scroll -->
+        <img src="logo.png" alt="Logo" />
+        <img src="logo2.png" alt="Logo" />
+        <img src="logo3.png" alt="Logo" />
+        <img src="logo.png" alt="Logo" />
+        <img src="logo2.png" alt="Logo" />
+        <img src="logo3.png" alt="Logo" />
+      
+       
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
